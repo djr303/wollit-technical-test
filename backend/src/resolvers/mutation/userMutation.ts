@@ -1,11 +1,11 @@
-import { Context } from "../../utils";
+/* import { Context } from "../../utils";
 import {
   MutationCreateUserArgs,
   MutationUpdateUserArgs,
   MutationDeleteUserArgs
 } from "../../generated/types";
-
-const userMutation = {
+ */
+/* const userMutation = {
   createUser(parent, { data }: MutationCreateUserArgs, { prisma }: Context) {
     return prisma.createUser(data);
   },
@@ -20,5 +20,7 @@ const userMutation = {
     return prisma.deleteUser({ id });
   }
 };
+ */
 
-export default userMutation;
+// export default userMutation;
+export default {}

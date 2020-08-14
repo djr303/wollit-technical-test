@@ -1,7 +1,7 @@
-import userQuery from "./userQuery";
+import categoriesQuery from "./categoriesQuery";
 
 const Query = {
-  ...userQuery
+  ...categoriesQuery
 };
 
 export default Query;

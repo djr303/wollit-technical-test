@@ -1,0 +1,94 @@
+[
+  {
+    "id": "6e10ddbd-ba55-496d-8960-2820063043c7",
+    "name": "Electronics",
+    "categories": [
+      {
+        "id": "24ff6a2e-20d9-45d6-9b1d-616173919736",
+        "name": "TVs",
+        "categories": [
+          {
+            "id": "89906325-a32f-45c6-9458-0579664f1eb3",
+            "name": "Flatscreens",
+            "items": [
+              {
+                "id": "e4854e0e-ed49-451e-909d-7edc89bd239c",
+                "name": "27 inch LCD HDMI monitor"
+              },
+              {
+                "id": "a654cd8f-d347-4ba9-a12e-55a314e85f27",
+                "name": "Superwide LCD screen"
+              }
+            ]
+          }
+        ],
+        "items": [
+          {
+            "id": "f528297d-422f-4278-84bf-df7b47e545f2",
+            "name": "Old and busted black and white TV"
+          }
+        ]
+      },
+      {
+        "id": "5eabeb66-1702-4139-ac27-d68b43121718",
+        "name": "Computers",
+        "items": [
+          {
+            "id": "6146c4b1-35eb-46db-9fdf-edfb58feb00c",
+            "name": "Dell laptop (Linux)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "deccbd48-d989-4ee2-9cab-7d2309da7199",
+    "name": "Media",
+    "categories": [
+      {
+        "id": "89adc9e4-7b64-4696-8041-fe6c72a8d8ed",
+        "name": "DVDs",
+        "items": [
+          {
+            "id": "38d9e26f-c4a6-46b2-ad93-6174bc1b3b49",
+            "name": "Lion King"
+          },
+          {
+            "id": "52de92c9-e70c-437b-8d34-6af13b3a364d",
+            "name": "Mandy"
+          },
+          {
+            "id": "dc77a387-58ea-4403-a1ea-9cb20dc905fd",
+            "name": "2005 Ashes series"
+          }
+        ]
+      },
+      {
+        "id": "2ecb4376-7817-43bc-95b2-53a32eeb8467",
+        "name": "MP3s",
+        "items": [
+          {
+            "id": "8488be0a-020e-4246-a3cc-7fb681309319",
+            "name": "King tubby (Best of)"
+          },
+          {
+            "id": "26d2d4c5-e7e8-48ba-aac9-e3d1ad0eceab",
+            "name": "Beethoven Symphony No. 5"
+          },
+          {
+            "id": "bd7d3a59-9a19-4063-8316-10c72146d255",
+            "name": "Aphextwin Selected ambient works Vol. 1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2686f8c0-0e3b-411e-884c-6061a2bea8fe",
+    "name": "Books"
+  },
+  {
+    "id": "43610e42-fb4a-42bb-a2f8-44a19ad087d1",
+    "name": "Music"
+  }
+]
