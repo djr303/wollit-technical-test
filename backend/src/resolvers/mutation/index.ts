@@ -1,7 +1,9 @@
-import userMutation from "./userMutation";
+import categoryMutation from "./categoryMutation";
+import itemMutation from "./itemMutation";
 
 const Mutation = {
-  ...userMutation
+  ...categoryMutation,
+  ...itemMutation
 };
 
 export default Mutation;

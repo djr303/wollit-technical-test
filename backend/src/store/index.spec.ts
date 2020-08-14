@@ -12,9 +12,7 @@ describe('Store', () => {
     });
 
     it('should return full json object when .get() method is called', () => {
-      const store = new Store()
-      const result = store.get()
-      expect(result).to.be.ok
+      //START HERE: Write unit for all methods on Store
     })
   })
 })

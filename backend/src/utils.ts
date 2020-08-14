@@ -1,4 +1,5 @@
+import { Store } from './store'
 
 export interface Context {
-  prisma: any
+  store: Store
 }

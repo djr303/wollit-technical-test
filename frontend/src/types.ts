@@ -23,7 +23,38 @@ export type Item = {
   name: Scalars['String'];
 };
 
+export type Mutation = {
+  __typename?: 'Mutation';
+  addItem?: Maybe<Item>;
+  addCategory?: Maybe<Category>;
+  updateCategory?: Maybe<Category>;
+};
+
+
+export type MutationAddItemArgs = {
+  parentCategoryID: Scalars['ID'];
+  name: Scalars['String'];
+};
+
+
+export type MutationAddCategoryArgs = {
+  parentCategoryID: Scalars['ID'];
+};
+
+
+export type MutationUpdateCategoryArgs = {
+  id: Scalars['ID'];
+  root?: Maybe<Scalars['Boolean']>;
+  parentCategoryId?: Maybe<Scalars['ID']>;
+  name?: Maybe<Scalars['String']>;
+};
+
 export type Query = {
   __typename?: 'Query';
   categories?: Maybe<Array<Category>>;
+};
+
+
+export type QueryCategoriesArgs = {
+  parentCategoryId?: Maybe<Scalars['ID']>;
 };

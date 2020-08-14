@@ -6,8 +6,8 @@ export declare type Item = {
 export declare type Category = {
   id: string,
   name: string,
-  categories: Category[],
-  items: Item[]
+  categories?: Category[],
+  items?: Item[]
 }
 
 export declare type RawBelongings = Category[]

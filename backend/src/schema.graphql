@@ -1,13 +1,14 @@
 type Query {
-  categories: [Category!]
+  categories(parentCategoryId: ID): [Category!]
 }
 
-# type Mutation {
-#  addItem(parentCategoryID: ID!): Item
-#  updateItem(itemID: ID!): Item
-#  addCategory(parentCategoryID: ID!): Category
-#  updateCategory(id: ID, category: Category): Category
-# }
+type Mutation {
+  addItem(parentCategoryID: ID!, name: String!): Item
+  addCategory(parentCategoryID: ID!): Category
+  updateCategory(id: ID!, root: Boolean, parentCategoryId: ID, name: String): Category
+ }
+
+type Root
 
 type Item {
   id: ID!
