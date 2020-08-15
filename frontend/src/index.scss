@@ -1,0 +1,27 @@
+
+@import "./common/scss/colours";
+@import "./common/scss/reset";
+@import "./common/scss/fonts";
+
+body {
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, $lighter3, lighten($lighter3, 15%) 100%);;
+  color: $darkGray;
+}
+
+a {
+  color: $darker1;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active, &:visited {
+    color: $darker2;
+  }
+}
+
+

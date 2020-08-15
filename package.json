@@ -1,0 +1,21 @@
+{
+  "name": "wollit-technical-test",
+  "version": "0.0.1",
+  "description": "Wollit technical test written by David Roberts",
+  "main": "none",
+  "scripts": {
+    "start:server": "cd ./backend && yarn start",
+    "start:client": "cd ./frontend && yarn start",
+    "test:server": "cd ./backend && yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djr303/wollit-technical-test.git"
+  },
+  "author": "David Roberts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djr303/wollit-technical-test/issues"
+  },
+  "homepage": "https://github.com/djr303/wollit-technical-test#readme"
+}

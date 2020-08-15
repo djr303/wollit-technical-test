@@ -35,10 +35,10 @@ export class Store {
 
   getCategories(parentCategoryId?: string): Category[] {
     const categoryPath = parentCategoryId ? this.index[parentCategoryId] : void 0
-    return categoryPath ? this.instance.get(`root${categoryPath}.categories`).value() : this.instance.getState()
+    return categoryPath ? this.instance.get(`root${categoryPath}.categories`).value() : this.instance.getState().root
   }
 
-  addItem(name: string, parentCategoryId: string): Item {
+  /* addItem(name: string, parentCategoryId: string): Item {
     const payload = this.createPayload(name)
     const categoryPath = this.index[parentCategoryId]
     const items = this.instance.get(`root${categoryPath}.items`).value()
@@ -104,7 +104,7 @@ export class Store {
     }
 
     return subTree
-  }
+  } */
 }
 
 let store

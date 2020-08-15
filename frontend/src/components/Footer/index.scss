@@ -1,0 +1,9 @@
+@import '../../common/scss/colours';
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px dotted $darkGray;
+  font-size: 0.8em;
+  height: 30px;
+}

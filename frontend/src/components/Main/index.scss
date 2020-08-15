@@ -1,0 +1,14 @@
+@import "../../common/scss/colours";
+
+main {
+  padding: 10px;
+
+  .reflex-container.vertical > .reflex-splitter, .reflex-container.vertical > .reflex-splitter:hover, .reflex-container.vertical > .reflex-splitter.active {
+    border-right: 1px dotted $darker1;
+    border-left: 1px dotted $darker1;
+    cursor: col-resize;
+    height: 100%;
+    width: 6px;
+    background: none;
+  }
+}

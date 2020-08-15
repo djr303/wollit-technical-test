@@ -1,21 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./pages/App";
-import * as serviceWorker from "./serviceWorker";
-
+import "./index.scss";
+import AppContainer from "./components/AppConatiner";
 import { ApolloProvider } from "react-apollo";
 import ApolloBoost from "apollo-boost";
+import { API_ENDPOINT } from './common/constants'
 
 const client = new ApolloBoost({
-  uri: "http://localhost:4000"
+  uri: API_ENDPOINT
 });
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App />
+    <AppContainer />
   </ApolloProvider>,
   document.getElementById("root")
 );
 
-serviceWorker.unregister();

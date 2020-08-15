@@ -1,0 +1,22 @@
+@import '../../common/scss/colours';
+
+header {
+  width: 100%;
+  border-bottom: 1px dotted $darker2;
+  display: flex;
+  flex-direction: row;
+  height: 82px;
+  padding-bottom: 10px;
+
+  .logo-container {
+    margin-right: 15px; 
+  }
+
+  h1 {
+    flex-grow: 100;
+    padding: 0;
+    height: inherit;
+    font-size: 3em;
+    line-height: 70px;
+  }
+}

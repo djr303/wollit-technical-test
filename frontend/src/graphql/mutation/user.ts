@@ -1,5 +1,5 @@
 import { gql } from "apollo-boost";
-import { userFields } from "../fragments/user";
+/* import { userFields } from "../fragments/categories";
 
 export const createUser = gql`
   mutation($data: CreateUserInput) {
@@ -27,3 +27,4 @@ export const deleteUser = gql`
   }
   ${userFields}
 `;
+ */

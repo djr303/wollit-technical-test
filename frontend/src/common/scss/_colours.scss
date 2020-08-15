@@ -1,0 +1,9 @@
+$base:#21dba4;
+
+$lighter1: lighten(adjust-hue($base, 5), 10%);
+$lighter2: lighten(adjust-hue($base, 10), 20%);
+$lighter3: lighten(adjust-hue($base, 15), 30%);
+$darker1: darken(adjust-hue($base, -5), 10%);
+$darker2: darken(adjust-hue($base, -10), 20%);
+
+$darkGray: #3d3d3d

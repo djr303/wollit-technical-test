@@ -6,9 +6,8 @@ type Mutation {
   addItem(parentCategoryID: ID!, name: String!): Item
   addCategory(parentCategoryID: ID!): Category
   updateCategory(id: ID!, root: Boolean, parentCategoryId: ID, name: String): Category
- }
+}
 
-type Root
 
 type Item {
   id: ID!
