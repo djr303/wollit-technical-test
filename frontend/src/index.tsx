@@ -3,12 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import AppContainer from "./components/AppConatiner";
 import { ApolloProvider } from "react-apollo";
-import ApolloBoost from "apollo-boost";
-import { API_ENDPOINT } from './common/constants'
-
-const client = new ApolloBoost({
-  uri: API_ENDPOINT
-});
+import client from './apolloClient'
 
 ReactDOM.render(
   <ApolloProvider client={client}>

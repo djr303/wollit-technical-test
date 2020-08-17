@@ -9,11 +9,11 @@ export type AppProps = {
   categories: Category[]
 }
 
-const App: React.FC<AppProps> = ({ categories }) => {
+const App: React.FC<AppProps> = (props) => {
   return (
     <div className="app">
       <Header className="header" />
-      <Main className="main" />
+      <Main { ...props } className="main" />
       <Footer className="footer" />
     </div>
   )

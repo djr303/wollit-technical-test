@@ -3,12 +3,17 @@
 @import "./common/scss/reset";
 @import "./common/scss/fonts";
 
+html, #root {
+  height: 100%;
+}
+
 body {
   font-family: "Nunito", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(135deg, $lighter3, lighten($lighter3, 15%) 100%);;
   color: $darkGray;
+  min-height: 100%;
 }
 
 a {

@@ -8,15 +8,15 @@ import { categoriesFields } from "../fragments/categories";
       name
     }
   }
-`; */
+`;  */
 
-export const getCategories = gql`
+export const getCategories = (depth: number) => gql`
   query {
     categories {
       ...categoriesFields
     }
   }
-   ${categoriesFields}
-`; 
+   ${categoriesFields(depth)}
+`;  
 
 

@@ -6,7 +6,8 @@
   "scripts": {
     "start:server": "cd ./backend && yarn start",
     "start:client": "cd ./frontend && yarn start",
-    "test:server": "cd ./backend && yarn test"
+    "test:server": "cd ./backend && yarn test",
+    "generate:schema": "node ./scripts/generateSchemaJson.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/djr303/wollit-technical-test/issues"
   },
-  "homepage": "https://github.com/djr303/wollit-technical-test#readme"
+  "homepage": "https://github.com/djr303/wollit-technical-test#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
 }

@@ -11,14 +11,34 @@ To start the GraphQL server:
 To run the GraphQL server unit tests:
 `$ yarn test:server`
 
+
 # TODOs
 
 * Suitable unit tests for all server side and client side logic
 * 4 e2e tests for each one of the acceptance criteria, plus data seeding for store.ts
 * DRY approach across the code base
 * squash git commit history pre-submission
+* Custom hook? queries and writing to cache, using useQuery, write fragment, useClient
+* make sure you get rid of the all the any types
+* See how far you get with refactoring
+* TreeView component be broken up into separate files
+* constants for state trees
+* helpers for state trees
+* Clean up functions
+* splash and loading
+* Context needed for machine?
+* unused variables
+* generate schema script
+* un-used code
+
 
 # Notes on future work
 
-* The server implementation uses a few simple abstractions to work with a flat file database. If I had more time I would use Docker Compose. One container for the server code with a MongoDB instance and another container for the frontend React application
+* The server implementation uses a few simple abstractions to work with a flat file database. If I had more time I would use Docker Compose. One container for the server code with a MongoDB instance - normalizing the data - and another container for the frontend React application
 * I haven't handled errors from the GraphQL server on the client. I would implement a UI message alter and retrying mechanism
+* There is an anti-pattern present in the React application: 'Prop drilling'. I would possible implement an event bus or use RXJS to manage subscription to events / callbacks
+* Unit tests (appropiate)??
+* Refactoring work to do:
+  * removal of 'any' types
+* partial update of tree for performance reasons in 'infinate scenario'
+

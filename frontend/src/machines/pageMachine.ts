@@ -1,20 +1,24 @@
-import { Machine, actions } from "xstate"
+import { Machine, actions, StateMachine } from "xstate"
 
 import { PageContext, PageStateSchema, PageEvent } from './types/pageMachine'
 
 const { assign } = actions
 
-const initalPageLoadComplete = (context: PageContext) => context.loadingComplete && context.animationComplete
+// const initalPageLoadComplete = (context: PageContext) => 
+const initalPageLoadComplete = (context: any) => 
+  context.loadingComplete && context.animationComplete && !context.refreshed
 
-const pageMachine = Machine<PageContext, PageStateSchema, PageEvent>({
+// const pageMachine = Machine<PageContext, PageStateSchema, PageEvent>({
+const pageMachine = Machine<any, any, any>({
   id: 'page',
-  initial: 'initial',
+  initial: 'waiting',
   context: {
     animationComplete: false,
     loadingComplete: false,
+    maxTreeDepth: 1
   },
   states: {
-    initial: {},
+    refreshed: {},
     waiting: {
       on: {
         '': {
@@ -26,6 +30,12 @@ const pageMachine = Machine<PageContext, PageStateSchema, PageEvent>({
     complete: {},
   },
   on: {
+    REFRESH: {
+      target: 'refreshed',
+      actions: assign({
+        maxTreeDepth: (context, event) => context.maxTreeDepth = event.maxTreeDepth,
+      })
+    },
     LOADING_COMPLETE:
     {
       target: 'waiting',
