@@ -2,7 +2,7 @@ import { gql } from "apollo-boost";
 import { categoriesFields } from "../fragments/categories";
 
 export const getCategoriesList = gql`
-  query getCategoriesList {
+  query categoriesList {
     getCategoriesList {
       id
       name
@@ -11,7 +11,7 @@ export const getCategoriesList = gql`
 `
 
 export const getCategories = (depth: number) => gql`
-  query getCategories {
+  query categories {
     getCategories {
       ...categoriesFields
     }

@@ -2,7 +2,7 @@
 
 header {
   width: 100%;
-  border-bottom: 1px dotted $darker2;
+  border-bottom: 1px dotted $lightGray;
   display: flex;
   flex-direction: row;
   height: 82px;
@@ -17,6 +17,7 @@ header {
     padding: 0;
     height: inherit;
     font-size: 3em;
-    line-height: 70px;
+    line-height: 74px;
+    color: $lightGray;
   }
 }

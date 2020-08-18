@@ -6,11 +6,12 @@ main {
   .reflex-container.vertical > .reflex-splitter,
   .reflex-container.vertical > .reflex-splitter:hover,
   .reflex-container.vertical > .reflex-splitter.active {
-    border-right: 1px dotted $darker1;
-    border-left: 1px dotted $darker1;
+    border-right: 1px dotted $lightGray;
+    border-left: none;
     cursor: col-resize;
     height: 100%;
-    width: 6px;
+    width: 5px;
+    margin-right: 5px;
     background: none;
   }
 
@@ -24,7 +25,7 @@ main {
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $lighter2;
+      background-color: $lightGray;
       outline: none;
     }
   }

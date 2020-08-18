@@ -1,69 +1,42 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
+import theme from '../../common/theme'
+import './index.scss'
+import { colours } from '../../common/constants'
 
 const useStyles = makeStyles((theme) => ({
-  button: {
-    display: 'block',
-    marginTop: theme.spacing(2),
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
+  icon: {
+    color: colours.lightGray,
+  }
 }));
 
-export type SelectInput = {
-  selectText: string
+export type SelectInputProps = {
+  label: string
 }
 
-const SelectInput: React.FC<any> = ({ selectText }) => {
-  const classes = useStyles();
-  const [age, setAge] = React.useState('');
-  const [open, setOpen] = React.useState(false);
+const SelectInput: React.FC<SelectInputProps> = ({ label }) => {
 
-  const handleChange = (event: any) => {
-    setAge(event.target.value);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  const classes = useStyles(theme)
 
   return (
-    <div>
-      <Button className={classes.button} onClick={handleOpen}>
-        Open the select
-      </Button>
-      <FormControl className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">Age</InputLabel>
-        <Select
-          labelId="demo-controlled-open-select-label"
-          id="demo-controlled-open-select"
-          open={open}
-          onClose={handleClose}
-          onOpen={handleOpen}
-          value={age}
-          onChange={handleChange}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-      </FormControl>
-    </div>
-  );
+    <FormControl variant="outlined">
+    <InputLabel htmlFor="outlined-age-native-simple">{label}</InputLabel>
+    <Select
+      classes={classes}
+      native
+      value={10}
+      onChange={() => console.log('onChange')}
+      label={label}
+    >
+      <option aria-label="None" value="" />
+      <option>Root category</option>
+    </Select>
+  </FormControl>
+  )
 }
+
 
 export default SelectInput

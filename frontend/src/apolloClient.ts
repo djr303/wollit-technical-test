@@ -3,8 +3,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
 import { IntrospectionFragmentMatcher } from 'apollo-cache-inmemory';
 import introspectionQueryResultData from './graphql/fragmentTypes.json';
-
-const API_ENDPOINT = 'http://localhost:4000'
+import { API_ENDPOINT } from './common/constants'
 
 const fragmentMatcher = new IntrospectionFragmentMatcher({
   introspectionQueryResultData

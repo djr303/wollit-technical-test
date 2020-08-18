@@ -29,9 +29,9 @@ const AppContainer: React.FC = () => {
 
   return (
       <MachineContext.Provider value={machine}>
-        <App categories={data!.categories as Category[]} />
-      </MachineContext.Provider>
-    )
+        <App categories={data!.getCategories as Category[]} />
+      </MachineContext.Provider> 
+    ) 
 };
 
 export default AppContainer;

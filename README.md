@@ -30,6 +30,7 @@ To run the GraphQL server unit tests:
 * unused variables
 * generate schema script
 * un-used code and files
+* theme object used on all MUI compoennts
 
 
 # Notes on future work
