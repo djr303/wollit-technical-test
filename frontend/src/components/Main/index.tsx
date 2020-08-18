@@ -4,9 +4,10 @@ import 'react-reflex/styles.css'
 import './index.scss'
 import TreeView from '../TreeView'
 import { Category } from '../../types'
-import { useApolloClient, useLazyQuery } from 'react-apollo';
-import { gql } from "apollo-boost";
+/* import { useApolloClient, useLazyQuery } from 'react-apollo';
+import { gql } from "apollo-boost"; */
 import machineContext from '../../contexts/machineContext'
+import Editor from '../EditorContainer'
 
 export type MainProps = {
   className?: string
@@ -32,6 +33,7 @@ const Main: React.FC<MainProps> = ({ className, categories }) => {
         <ReflexSplitter />
 
         <ReflexElement className="editor-container">
+          <Editor />
         </ReflexElement>
 
       </ReflexContainer>

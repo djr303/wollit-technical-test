@@ -1,5 +1,6 @@
 type Query {
-  categories(parentCategoryId: ID): [Category!]
+  getCategories(parentCategoryId: ID): [Category!]!
+  getCategoriesList: [CategoryListItem!]!
 }
 
 type Mutation {
@@ -10,6 +11,11 @@ type Mutation {
 
 
 type Item {
+  id: ID!
+  name: String!
+}
+
+type CategoryListItem {
   id: ID!
   name: String!
 }

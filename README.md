@@ -29,7 +29,7 @@ To run the GraphQL server unit tests:
 * Context needed for machine?
 * unused variables
 * generate schema script
-* un-used code
+* un-used code and files
 
 
 # Notes on future work

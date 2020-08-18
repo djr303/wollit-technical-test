@@ -17,6 +17,12 @@ export type Category = {
   categories?: Maybe<Array<Maybe<Category>>>;
 };
 
+export type CategoryListItem = {
+  __typename?: 'CategoryListItem';
+  id: Scalars['ID'];
+  name: Scalars['String'];
+};
+
 export type Item = {
   __typename?: 'Item';
   id: Scalars['ID'];
@@ -51,10 +57,11 @@ export type MutationUpdateCategoryArgs = {
 
 export type Query = {
   __typename?: 'Query';
-  categories?: Maybe<Array<Category>>;
+  getCategories: Array<Category>;
+  getCategoriesList: Array<CategoryListItem>;
 };
 
 
-export type QueryCategoriesArgs = {
+export type QueryGetCategoriesArgs = {
   parentCategoryId?: Maybe<Scalars['ID']>;
 };

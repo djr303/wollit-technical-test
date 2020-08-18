@@ -9,6 +9,7 @@ import { Category, Item } from './belongings'
 export class Store {
 
   private relativeFilePath: string = './data/belongings.json'
+  private rootKey = 'root'
   private instance: any
   private index: { [key: string]: string }
   private filePath: string
@@ -20,20 +21,31 @@ export class Store {
     this.generateIndex()
   }
 
-  private createPayload(name: string): Category {
+  /* private createPayload(name: string): Category {
     const id = generateUUID()
 
     return {
       id,
       name,
     }
-  }
+  } */
 
   private generateIndex(): void {
     this.index = generateIndex(JSON.parse(fs.readFileSync(this.filePath, 'utf8')).root)
   }
 
-  getCategories(parentCategoryId?: string): Category[] {
+  public getCategoriesList(): Category[] {
+    const indexKeys = Object.keys(this.index)
+    return indexKeys.map(k => { 
+      const { id, name } = this.instance.get(`${this.rootKey}${this.index[k]}`).value()
+      return {
+        id,
+        name
+      }
+    })
+  }
+
+  public getCategories(parentCategoryId?: string): Category[] {
     const categoryPath = parentCategoryId ? this.index[parentCategoryId] : void 0
     return categoryPath ? this.instance.get(`root${categoryPath}.categories`).value() : this.instance.getState().root
   }

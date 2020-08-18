@@ -1,9 +1,12 @@
 import { Context } from "../../utils";
+import { Category } from "../../store/belongings";
 
 const categoriesQuery = {
-  categories: (parent, { parentCategoryId }, context: Context) => {
-    return context.store.getCategories(parentCategoryId)
-  }
+  getCategories: (_, { parentCategoryId }, context: Context): Category[] =>
+    context.store.getCategories(parentCategoryId),
+
+  getCategoriesList: (_, __, context: Context): Category[] =>
+    context.store.getCategoriesList()
 }
 
 export default categoriesQuery;
