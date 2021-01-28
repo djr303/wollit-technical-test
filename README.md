@@ -1,5 +1,8 @@
 # Wollit technical test | Written by David Roberts
 
+* Note [28/01/21]: This application is incomplete. It is only intended to show React componsition and frontend architecural choices.
+
+
 Tested in NodeJS v12.16.3, Yarn v1.22.4 & Chrome latest
 
 To start the React application:
@@ -19,11 +22,10 @@ To run the GraphQL server unit tests:
 * DRY approach across the code base
 * squash git commit history pre-submission
 * Custom hook? queries and writing to cache, using useQuery, write fragment, useClient
-* make sure you get rid of the all the any types
-* See how far you get with refactoring
+* make sure you get rid of the all the any types (TypeScript)
 * TreeView component be broken up into separate files
-* constants for state trees
-* helpers for state trees
+* Constants for state trees
+* Helpers for state trees
 * Clean up functions
 * splash and loading
 * Context needed for machine?

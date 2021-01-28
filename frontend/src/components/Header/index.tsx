@@ -10,7 +10,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => (
   <header className={className}>
     <Logo className="logo-container" />
     <h1>
-      my.belonings
+      my.belongings
     </h1>
   </header>
 )
